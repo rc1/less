@@ -14,8 +14,8 @@ $:.unshift File.dirname(__FILE__)
 require 'less/ext'
 require 'less/command'
 require 'less/engine'
-require 'filesystemwatcher/servicestate.rb'
-require 'filesystemwatcher/filesystemwatcher.rb'
+require 'less/filesystemwatcher/servicestate.rb'
+require 'less/filesystemwatcher/filesystemwatcher.rb'
 
 module Less
   MixedUnitsError   = Class.new(RuntimeError)
