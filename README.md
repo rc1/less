@@ -1,7 +1,7 @@
-Modificatons
+Modifications
 ------------
 
-Added a directory watch command.
+Added a directory watch command to allows less to watch a folder. Any addition of or changes to .less files in the watched directory will be compiled automagically.
 
 In terminal:
 
