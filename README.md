@@ -24,15 +24,6 @@ LESS
 ====
 It's time CSS was done right – LESS is _leaner_ css.
 
-Setup
-------
-to get the latest development version:
-    
-    sudo gem install less -s http://gemcutter.org
-
-to get the latest stable version:
-
-    sudo gem install less
 
 Explained
 ---------
