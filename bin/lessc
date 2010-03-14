@@ -17,6 +17,8 @@ end
 # Argument defaults
 options = {
   :watch => false,
+  :directorywatch => false,
+  :directory => ".",
   :compress => false,
   :debug => false,
   :growl => false,
@@ -33,7 +35,15 @@ opts = OptionParser.new do |o|
   o.on("-w", "--watch", "watch for changes") do
     options[:watch] = true
   end
-
+  
+  # Directory watch mode
+   o.on("-d", "--directorywatch [dir]", "watches directory for changes") do |dir|
+     options[:directorywatch] = true
+     if dir then
+       options[:directory] = dir
+     end
+   end
+  
   # Growl
   o.on("-g", "--growl", "growl notifications") do
     if Less::GROWL && (Growl.installed? rescue false)
@@ -95,8 +105,10 @@ case ARGV.size
     options[:source] = ARGV[ 0 ]
     options[:destination] = ARGV[ 1 ]
   else
-    puts opts
-    exit
+    unless options[:directorywatch] then
+      puts opts
+      exit
+    end
 end
 
 Less::Command.new( options ).run! ? exit(0) : exit(1)
