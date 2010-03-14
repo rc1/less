@@ -1,7 +1,7 @@
 Modifications
 ------------
 
-Added a directory watch command to allows less to watch a folder. Any addition of or changes to .less files in the watched directory will be compiled automagically.
+Added a directory watch command to allowing less to watch a folder. Any addition of or changes to .less files in the watched directory will be compiled automagically.
 
 In terminal:
 
@@ -11,9 +11,10 @@ or by specifying a directory:
 
 	lessc -d web/css
 	
-gem binary available from  <http://www.rosscairns.com/dwnld/less/>
+
 
 Tested on Mac & Linux
+gem binary also available from  <http://www.rosscairns.com/dwnld/less/>
 
 -----------------
 
