@@ -1,3 +1,22 @@
+Modificatons
+------------
+
+Added a directory watch command.
+
+In terminal:
+
+    lessc -d
+
+or by specifying a directory:
+
+	lessc -d web/css
+	
+gem binary available from  http://www.rosscairns.com/dwnld/less/
+
+Tested on Mac & Linux
+
+-----------------
+
 **Note: From now on, most of the new development on LESS will be happening in <http://github.com/cloudhead/less.js>**
 
 LESS
