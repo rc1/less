@@ -11,7 +11,7 @@ or by specifying a directory:
 
 	lessc -d web/css
 	
-gem binary available from  http://www.rosscairns.com/dwnld/less/
+gem binary available from  <http://www.rosscairns.com/dwnld/less/>
 
 Tested on Mac & Linux
 
