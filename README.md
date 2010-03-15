@@ -11,6 +11,8 @@ or by specifying a directory:
 
 	lessc -d web/css
 	
+	
+![](http://emberapp.com/rc1/images/terminal/sizes/m.png)
 
 
 Tested on Mac & Linux
