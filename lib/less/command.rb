@@ -48,11 +48,11 @@ module Less
           if status == FileSystemWatcher::CREATED
             print "Adding "  + File.basename(file) +"\n: "
             parsewithfile file
-            print File.basename(file)+" finished\n: "
+            print File.basename(file)+"- finished\n: "
           elsif status == FileSystemWatcher::MODIFIED  
             print "Change detected to file " + File.basename(file)+"\n: "
             parsewithfile file
-            print File.basename(file)+" finished\n: "
+            print File.basename(file)+"- finished\n: "
           elsif status == FileSystemWatcher::DELETED
             print "Stopped watching " + File.basename(file)+"\n: "
           end
