@@ -7,7 +7,7 @@ module Less
     include Entity
 
     rule primary
-      (import / declaration / ruleset / mixin / comment)* {
+      (import / declaration / ruleset / mixin / comment / escape )* {
         def build env = Less::Element.new
           elements.map do |e|
             e.build env if e.respond_to? :build
@@ -19,7 +19,20 @@ module Less
     rule comment
       ws '/*' (!'*/' . )* '*/' ws / ws '//' (!"\n" .)* "\n" ws
     end
-
+    
+    rule escape
+      "${" escapedcontent "}$" {
+          def build env
+            env << Node::Property.new(escapedcontent.text_value + "null", nil, env)
+            env
+          end
+       }
+    end
+    
+    rule escapedcontent 
+      (!'}$' . )*
+    end
+    
     #
     # div, .class, body > p {...}
     #
