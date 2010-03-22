@@ -1,6 +1,34 @@
 Modifications
 ------------
 
+### Escaped Parameters*
+
+*\*this is a hack*
+
+Allows parameters that will not be parsed by lessc. Can be used to allow -webkit & -moz parameters and/or retain comments in outputted css.
+
+    .commit_search tr.light {
+       ${ background: -webkit-gradient(
+    	    linear,
+    	    15 28,
+    	    15 -15,
+    	    color-stop(1, rgb(240,240,239)),
+    	    color-stop(1, rgb(248,247,248))
+    	);
+    	background: -moz-linear-gradient(
+    	    center 28,
+    	    rgb(240,240,239) 100%,
+    	    rgb(248,247,248) 100%
+    	); }$
+        
+        height: 2.5em;
+         border-bottom: 1px solid #e1e1e1;
+    }
+
+
+
+### Directory Watching
+
 Added a directory watch command. Changes to, or addition of, .less files in the watched directory will be compiled automagically.
 
 In terminal:
