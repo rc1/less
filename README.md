@@ -5,7 +5,9 @@ Modifications
 
 *\*this is a hack*
 
-Allows parameters that will not be parsed by lessc. Can be used to allow -webkit & -moz parameters and/or retain comments in outputted css.
+    ${ ... }$
+
+Allows parameters that will not be parsed by lessc. Can be used to allow -webkit & -moz parameters and/or retain comments in outputted css. Can only be used within a selector.
 
     .commit_search tr.light {
        ${ background: -webkit-gradient(
