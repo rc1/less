@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{less}
-  s.version = "1.2.21"
+  s.version = "1.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["cloudhead"]
-  s.date = %q{2010-03-14}
+  s.date = %q{2010-03-22}
   s.default_executable = %q{lessc}
   s.description = %q{LESS is leaner CSS}
   s.email = %q{self@cloudhead.net}
@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
      "lib/less/engine/nodes.rb",
      "lib/less/engine/nodes/element.rb",
      "lib/less/engine/nodes/entity.rb",
+     "lib/less/engine/nodes/escaped.rb",
      "lib/less/engine/nodes/function.rb",
      "lib/less/engine/nodes/literal.rb",
      "lib/less/engine/nodes/property.rb",

@@ -18,6 +18,11 @@ describe Less::Engine do
   include LessEngineSpecHelper
 
   describe "to_css" do
+    
+    it "should parse escaped content" do
+      lessify(:literal_css).should == css(:literal_css)
+    end
+    
     it "should parse css" do
       lessify(:css).should == css(:css)
     end
